@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin: 0;
   font-family: 'Ariel', sans-serif;
   color: #fff;
@@ -88,6 +88,47 @@ nav a {
   font-weight: bold;
 }
 
+.join-direct-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.join-input-hero {
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #3a2a1a;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    outline: none;
+    box-sizing: border-box;
+    height: 52px;
+    transition: border-color 0.2s;
+}
+
+    .join-input-hero:focus {
+        border-color: #ffcc33;
+    }
+
+.join-btn-disabled {
+    opacity: 0.4;
+    background-color: #221a10 !important;
+    color: #888 !important;
+    cursor: not-allowed !important;
+    transition: all 0.3s ease;
+}
+
+.join-btn-active {
+    opacity: 1;
+    background: linear-gradient(90deg, #ffb347, #ffcc33) !important;
+    color: #000 !important;
+    cursor: pointer !important;
+}
 .how {
   background-color: #3a2a1a;
   border: none;

@@ -14,24 +14,41 @@
     </div>
     <nav>
       <ul>
-        <li><a href="main.html">Главная</a></li>
+        <li><a href="main.html">Головна</a></li>
         <li><a href="rules.html">Правила</a></li>
         <li><a href="#">Контакти</a></li>
         <li><a href="updates.html">Оновлення</a></li>
       </ul>
     </nav>
-    <button class="login">Вхід | Регистрація</button>
+    <button class="login">Вхід | Реєстрація</button>
   </header>
 
   <section class="hero">
-    <div class="content">
-      <h2>Ігра Бункер Онлайн</h2>
-      <p>Піпі-Пупу</p>
-      <div class="buttons">
-        <button class="create">Створити гру</button>
-        <button class="how">Як грати?</button>
+      <div class="content">
+          <h2>Гра Бункер Онлайн</h2>
+          <p>Піпі-Пупу</p>
+          <div class="buttons">
+              <button class="create" onclick="window.location.href='lobby.html'">Створити гру</button>
+
+              <form action="lobby.html" method="GET" class="join-direct-form">
+                  <input type="text"
+                         name="code"
+                         id="lobbyCodeInput"
+                         placeholder="Введіть код лобі"
+                         class="join-input-hero"
+                         required
+                         maxlength="6"
+                         autocomplete="off"
+                         oninput="checkCodeInput()">
+                  <button type="submit"
+                          id="joinSubmitBtn"
+                          class="how join-btn-disabled"
+                          disabled>
+                      Приєднатися
+                  </button>
+              </form>
+          </div>
       </div>
-    </div>
   </section>
 
   <section class="info">

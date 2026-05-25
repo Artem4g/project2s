@@ -1,0 +1,114 @@
+﻿body {
+  margin: 0;
+  font-family: 'Ariel', sans-serif;
+  color: #fff;
+  background-color: #0a0a0a;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.hero {
+  height: 100vh;
+  background: url('backgroundrules.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, #0a0a0a);
+}
+
+.content {
+  z-index: 2;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.create {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.how {
+  background-color: #3a2a1a;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.info {
+  background-color: #0a0a0a;
+  padding: 100px 20px;
+  text-align: center;
+}
+h3 {
+  font-size: 40px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  font-size: 14px;
+}

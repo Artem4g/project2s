@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра | Bunker Online</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body class="page-game">
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Bunker Online Logo">
+            <h1>Назва :/</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="#">Приєднатися</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="updates.html">Оновлення</a></li>
+            </ul>
+        </nav>
+        <button class="login">Вхід | Регистрація</button>
+    </header>
+
+    <main class="game-container">
+
+        <section class="game-panel bunker-description">
+            <h2>Характеристики Бункера</h2>
+            <p><strong>Розмір:</strong> 150 кв.м. | <strong>Запас їжі:</strong> на 4 місяці</p>
+            <p class="bunker-condition">Стан систем життєзабезпечення: 85%</p>
+        </section>
+
+        <section class="game-panel table-section">
+            <h3>Таблиця гравців</h3>
+            <table class="game-table">
+                <thead>
+                    <tr>
+                        <th>Гравець</th>
+                        <th>Професія</th>
+                        <th>Здоров'я</th>
+                        <th>Факти / Багаж</th>
+                        <th>Здібності</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="player-name">Гравець 1 (Ви)</td>
+                        <td>Хірург (досвід 10 років)</td>
+                        <td>Ідеальне</td>
+                        <td>
+                            <button class="secret-cell" data-text="Мисливський ніж та ліхтарик" onclick="revealCell(this)">Заховано</button>
+                        </td>
+                        <td>
+                            <button class="secret-cell" data-text="Переконання (Вилікувати 1 гравця)" data-type="ability" onclick="revealCell(this)">Заховано</button>
+                        </td>
+                        <td><span class="status-alive">У грі</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="player-name">Гравець 2</td>
+                        <td>Інженер-електрик</td>
+                        <td>Перелом лівої руки</td>
+                        <td>Вміє нічого</td>
+                        <td>
+                            <span class="useable-item" onclick="useItem(this)">Додаткове місце в бункері</span>
+                        </td>
+                        <td><span class="status-alive">У грі</span></td>
+                    </tr>
+
+                    <tr class="player-dead">
+                        <td class="player-name">Гравець 3</td>
+                        <td>Художник</td>
+                        <td>Абсолютно не здоровий</td>
+                        <td>а?</td>
+                        <td>Малювання стін</td>
+                        <td><span class="status-out">Вигнаний</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="vote-actions">
+            <button id="voteToggleBtn" class="vote-trigger-btn" onclick="toggleVoteMode()">Увімкнути голосування</button>
+        </div>
+
+        <section class="game-panel backstory-section">
+            <h3>Передісторія катастрофи</h3>
+            <p class="backstory-text">
+                Ну там катастофа, щось небезпечно...
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Бункер Онлайн. Усі права захищено.</p>
+    </footer>
+
+    <script>
+        function revealCell(button)
+        {
+            const realText = button.getAttribute('data-text');
+            const isAbility = button.getAttribute('data-type') === 'ability';
+            const parentCell = button.parentElement;
+
+            if (isAbility)
+            {
+                parentCell.innerHTML = `<span class="useable-item revealed-text" onclick="useItem(this)" title="Клікніть, щоб використати">${realText}</span>`;
+            }
+            else
+            {
+                parentCell.innerHTML = `<span class="revealed-text">${realText}</span>`;
+            }
+        }
+        function useItem(element) {
+            element.classList.toggle('used');
+        }
+    </script>
+</body>
+</html>

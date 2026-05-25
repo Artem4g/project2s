@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лобі гри | Bunker Online</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Bunker Online Logo">
+            <h1>Назва :/</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="updates.html">Оновлення</a></li>
+            </ul>
+        </nav>
+        <button class="login">Вхід | Регистрація</button>
+    </header>
+
+    <section class="hero lobby-section">
+        <div class="content lobby-box">
+            <h2>Лобі гри</h2>
+
+            <div class="room-code-container">
+                <p class="label">Код кімнати:</p>
+                <div class="code-display">#000000</div>
+            </div>
+
+            <div class="players-counter">
+                <p class="label">Гравців у лобі:</p>
+                <div class="counter-value">
+                    <span class="current-count">1</span> / <span class="max-count">16</span>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="create start-game-btn" onclick="window.location.href='game.html'">Почати гру</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Бункер Онлайн. Усі права захищено.</p>
+    </footer>
+</body>
+</html>
